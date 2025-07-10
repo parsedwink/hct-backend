@@ -1,0 +1,75 @@
+[
+  {
+    "name": "Rolls-Royce Silver Wraith",
+    "code": "rollsroyce",
+    "url": "https://www.rolls-roycemotorcars.com/",
+    "imp_categ": "Some car",
+    "img_name": "rollsroyce__martin-katler-wx-XBLK1bWA-unsplash.jpg",
+    "desc": "From 1906 to 2003, motor cars were manufactured and marketed under the Rolls-Royce brand by Rolls-Royce Limited and Rolls-Royce Motors. The Rolls-Royce Motor Cars subsidiary of BMW AG has no direct relationship to Rolls-Royce-branded vehicles produced before 2003, other than having briefly supplied components and engines."
+  },
+  {
+    "name": "Rolls-Royce  Phantom IV",
+    "code": "rollsroyce",
+    "url": "https://www.rolls-roycemotorcars.com/",
+    "imp_categ": "Some car",
+    "img_name": "rollsroyce__martin-katler-YI-9-n4232c-unsplash.jpg",
+    "desc": "From 1906 to 2003, motor cars were manufactured and marketed under the Rolls-Royce brand by Rolls-Royce Limited and Rolls-Royce Motors. The Rolls-Royce Motor Cars subsidiary of BMW AG has no direct relationship to Rolls-Royce-branded vehicles produced before 2003, other than having briefly supplied components and engines."
+  },
+  {
+    "name": "Bentley Silver Cloud",
+    "code": "rollsroyce",
+    "url": "https://www.rolls-roycemotorcars.com/",
+    "imp_categ": "Some car",
+    "img_name": "rollsroyce__simon-humler-gAEXE_dXJ8s-unsplash.jpg",
+    "desc": "From 1906 to 2003, motor cars were manufactured and marketed under the Rolls-Royce brand by Rolls-Royce Limited and Rolls-Royce Motors. The Rolls-Royce Motor Cars subsidiary of BMW AG has no direct relationship to Rolls-Royce-branded vehicles produced before 2003, other than having briefly supplied components and engines."
+  },
+  {
+    "name": "Jaguar Phantom V",
+    "code": "rollsroyce",
+    "url": "https://www.rolls-roycemotorcars.com/",
+    "imp_categ": "Some car",
+    "img_name": "rollsroyce__valeriia-neganova-hFA1GbXWb_8-unsplash.jpg",
+    "desc": "From 1906 to 2003, motor cars were manufactured and marketed under the Rolls-Royce brand by Rolls-Royce Limited and Rolls-Royce Motors. The Rolls-Royce Motor Cars subsidiary of BMW AG has no direct relationship to Rolls-Royce-branded vehicles produced before 2003, other than having briefly supplied components and engines."
+  },
+
+  {
+    "name": "Yaris Cross",
+    "code": "toyota",
+    "url": "https://www.toyota.com/",
+    "imp_categ": "Some big car",
+    "img_name": "toyota__luis-g-flores-ATiiHINIHyU-unsplash.jpg",
+    "desc": "Renault a vândut o serie de modele interesante în USA în anii 1980, în special autoturisme cu o imagine simplă dar inconfundabile, Renault Alliance GTA (Renault 9) și GTA convertibilă (un sistem automat de decapotare) de asemenea motorul de 2,0 litri – un motor mare pentru o mașină din clasa ei; Renault a vândut și alte modele în Statele Unite în timpul anilor 1980."
+  },
+  {
+    "name": "Corolla Cross",
+    "code": "toyota",
+    "url": "https://www.toyota.com/",
+    "imp_categ": "Some big car",
+    "img_name": "toyota__luis-g-flores-BZtQDp4OyYk-unsplash.jpg",
+    "desc": "Renault a vândut o serie de modele interesante în USA în anii 1980, în special autoturisme cu o imagine simplă dar inconfundabile, Renault Alliance GTA (Renault 9) și GTA convertibilă (un sistem automat de decapotare) de asemenea motorul de 2,0 litri – un motor mare pentru o mașină din clasa ei; Renault a vândut și alte modele în Statele Unite în timpul anilor 1980."
+  },
+  {
+    "name": "Kluger/Highlander",
+    "code": "toyota",
+    "url": "https://www.toyota.com/",
+    "imp_categ": "Some big car",
+    "img_name": "toyota__luis-g-flores-RqXTsRl4nnw-unsplash.jpg",
+    "desc": "Renault a vândut o serie de modele interesante în USA în anii 1980, în special autoturisme cu o imagine simplă dar inconfundabile, Renault Alliance GTA (Renault 9) și GTA convertibilă (un sistem automat de decapotare) de asemenea motorul de 2,0 litri – un motor mare pentru o mașină din clasa ei; Renault a vândut și alte modele în Statele Unite în timpul anilor 1980."
+  },
+  {
+    "name": "Urban Cruiser",
+    "code": "toyota",
+    "url": "https://www.toyota.com/",
+    "imp_categ": "Some big car",
+    "img_name": "toyota__vincent-mutasa-d18Qy-rMVcY-unsplash.jpg",
+    "desc": "Renault a vândut o serie de modele interesante în USA în anii 1980, în special autoturisme cu o imagine simplă dar inconfundabile, Renault Alliance GTA (Renault 9) și GTA convertibilă (un sistem automat de decapotare) de asemenea motorul de 2,0 litri – un motor mare pentru o mașină din clasa ei; Renault a vândut și alte modele în Statele Unite în timpul anilor 1980."
+  },
+  {
+    "name": "Fortuner",
+    "code": "toyota",
+    "url": "https://www.toyota.com/",
+    "imp_categ": "Some big car",
+    "img_name": "toyota__zach-betten-XCQfqU7NKkY-unsplash.jpg",
+    "desc": "Renault a vândut o serie de modele interesante în USA în anii 1980, în special autoturisme cu o imagine simplă dar inconfundabile, Renault Alliance GTA (Renault 9) și GTA convertibilă (un sistem automat de decapotare) de asemenea motorul de 2,0 litri – un motor mare pentru o mașină din clasa ei; Renault a vândut și alte modele în Statele Unite în timpul anilor 1980."
+  }
+]

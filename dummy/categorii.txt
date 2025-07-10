@@ -1,0 +1,6 @@
+Autoturisme
+Mașină subcompactă (B)
+Mașină compactă (C)
+Mașină medie (M)
+Troaiția
+Auto pentru umblat seara
