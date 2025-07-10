@@ -1,10 +1,11 @@
-import { promises as fs } from 'fs'
+import { existsSync, promises as fs } from 'fs'
 
-import type { SanitizedConfig } from 'payload'
-import payload, { getFileByPath } from 'payload'
 import type { Parteneri } from '@/payload-types'
+import type { SanitizedConfig } from 'payload'
+import payload from 'payload'
 
 const BASE = 'dummy/'
+const PLACEHOLDER = `${BASE}image_placeholder.png`
 
 async function readFile(fileName: string): Promise<string> {
   const content = await fs.readFile(BASE + fileName, 'utf8')
@@ -52,7 +53,10 @@ export const script = async (config: SanitizedConfig) => {
     const { id, name, desc, url } = p
 
     // logo partener
-    const imageFilePath = `${BASE}partner_logos/logo_${id}.png`
+    let imageFilePath = `${BASE}partner_logos/logo_${id}.png`
+    if (!existsSync(imageFilePath)) {
+      imageFilePath = PLACEHOLDER
+    }
     const { id: uploadedImage } = await payload.create({
       collection: 'media',
       data: { alt: `Logo ${name}` },
@@ -77,8 +81,18 @@ export const script = async (config: SanitizedConfig) => {
   // produse
   result = imp_prodse.map(async (p) => {
     const { name, code, url, imp_categ, img_name, desc } = p
-    // upload imagine produs
-    const imageFilePath = `${BASE}imagini_produse/${img_name}`
+    // imagine produs
+    let imageFilePath
+    if (img_name.length > 0) {
+      imageFilePath = `${BASE}imagini_produse/${img_name}`
+      if (!existsSync(imageFilePath)) {
+        imageFilePath = PLACEHOLDER
+        payload.logger.warn(`code ${code}, name ${name}, image not found: ${img_name}`)
+      }
+    } else {
+      imageFilePath = PLACEHOLDER
+      payload.logger.warn(`code ${code}, name ${name}, has no image`)
+    }
     const { id: uploadedImage } = await payload.create({
       collection: 'imgprod',
       data: { alt: `${code} ${name}` },

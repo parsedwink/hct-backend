@@ -24,11 +24,19 @@
     "desc": "From 1906 to 2003, motor cars were manufactured and marketed under the Rolls-Royce brand by Rolls-Royce Limited and Rolls-Royce Motors. The Rolls-Royce Motor Cars subsidiary of BMW AG has no direct relationship to Rolls-Royce-branded vehicles produced before 2003, other than having briefly supplied components and engines."
   },
   {
-    "name": "Jaguar Phantom V",
+    "name": "Bentley Gold WRONG IMG",
     "code": "rollsroyce",
     "url": "https://www.rolls-roycemotorcars.com/",
     "imp_categ": "Some car",
-    "img_name": "rollsroyce__valeriia-neganova-hFA1GbXWb_8-unsplash.jpg",
+    "img_name": "i-am-no-here.png",
+    "desc": "Prod with missing image file"
+  },
+  {
+    "name": "Jaguar Phantom V NONE IMG",
+    "code": "rollsroyce",
+    "url": "https://www.rolls-roycemotorcars.com/",
+    "imp_categ": "Some car",
+    "img_name": "",
     "desc": "From 1906 to 2003, motor cars were manufactured and marketed under the Rolls-Royce brand by Rolls-Royce Limited and Rolls-Royce Motors. The Rolls-Royce Motor Cars subsidiary of BMW AG has no direct relationship to Rolls-Royce-branded vehicles produced before 2003, other than having briefly supplied components and engines."
   },
 
