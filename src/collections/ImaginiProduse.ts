@@ -14,6 +14,6 @@ export const ImaginiProduse: CollectionConfig = {
     { name: 'partener', type: 'relationship', relationTo: 'parteneri', required: false },
   ],
   upload: {
-    staticDir: 'public/media',
+    staticDir: 'public/imgprod',
   },
 }
