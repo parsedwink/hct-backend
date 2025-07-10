@@ -50,13 +50,13 @@ export const script = async (config: SanitizedConfig) => {
   // parteneri
   result = imp_partners.map(async (p) => {
     const { id, name, desc, url } = p
-    const imageFilePath = `${BASE}partner_logos/logo_${id}.png`
-    const imageFile = await getFileByPath(imageFilePath)
 
+    // logo partener
+    const imageFilePath = `${BASE}partner_logos/logo_${id}.png`
     const { id: uploadedImage } = await payload.create({
       collection: 'media',
       data: { alt: `Logo ${name}` },
-      file: imageFile,
+      filePath: imageFilePath,
     })
     const created = await payload.create({
       collection: 'parteneri',
@@ -79,11 +79,10 @@ export const script = async (config: SanitizedConfig) => {
     const { name, code, url, imp_categ, img_name, desc } = p
     // upload imagine produs
     const imageFilePath = `${BASE}imagini_produse/${img_name}`
-    const imageFile = await getFileByPath(imageFilePath)
     const { id: uploadedImage } = await payload.create({
       collection: 'imgprod',
       data: { alt: `${code} ${name}` },
-      file: imageFile,
+      filePath: imageFilePath,
     })
     // get partener from code
     const partener = created_partneri.get(code)
