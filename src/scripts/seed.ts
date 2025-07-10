@@ -4,7 +4,7 @@ import type { Parteneri } from '@/payload-types'
 import type { SanitizedConfig } from 'payload'
 import payload from 'payload'
 
-const BASE = 'dummy/'
+const BASE = 'import/'
 const PLACEHOLDER = `${BASE}image_placeholder.png`
 
 async function readFile(fileName: string): Promise<string> {
