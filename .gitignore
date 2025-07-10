@@ -40,7 +40,12 @@ next-env.d.ts
 
 .env
 
-/media
+# uploads
+/public/*
+!/public/.gitkeep
+
+# database
+/backend.db
 
 # Playwright
 node_modules/
