@@ -2,8 +2,8 @@
 
 ## TODO
 
-- [ ] clean db script
-- [ ] imgprod missing placeholder with logo
+- [x] clean db script
+- [x] imgprod missing placeholder with logo
 - [ ] use falso fake data
 - [ ] random materiale in produs (es-toolkit sampleSize)
 - [ ] display collection count in admin dashboard
