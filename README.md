@@ -4,9 +4,11 @@
 
 - [x] clean db script
 - [x] imgprod missing placeholder with logo
-- [ ] use falso fake data
-- [ ] random materiale in produs (es-toolkit sampleSize)
+- [x] use falso fake data
+- [x] random materiale in produs (es-toolkit sampleSize)
 - [ ] display collection count in admin dashboard
+- [ ] beautify lists in admin
+- [ ] i18n ro
 - [ ] docker deploy (see articles on iPhone)
 - [ ] mailer
 - [x] versions/drafts? NEIN (https://payloadcms.com/docs/versions/overview)
