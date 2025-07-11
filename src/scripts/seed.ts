@@ -80,7 +80,7 @@ export const script = async (config: SanitizedConfig) => {
   await Promise.all(result)
   payload.logger.info('done: Parteneri')
 
-  // produse
+  // --- produse
   // imgprod_placeholder
   await payload.create({
     collection: 'imgprod',
@@ -110,11 +110,15 @@ export const script = async (config: SanitizedConfig) => {
 
     if (imageOK) {
       // create produs with image
-      const { id: uploadedImage } = await payload.create({
-        collection: 'imgprod',
-        data: { alt: `${code} ${name}` },
-        filePath: imageFilePath,
-      })
+      const uploadedImage = await payload
+        .create({
+          collection: 'imgprod',
+          data: { alt: `${code} ${name}` },
+          filePath: imageFilePath,
+        })
+        .catch((error) => {
+          payload.logger.error(`imgprod error: ${imageFilePath}, ${JSON.stringify(error)}`)
+        })
       await payload.create({
         collection: 'produse',
         data: {
@@ -124,7 +128,7 @@ export const script = async (config: SanitizedConfig) => {
           imagini: [
             {
               relationTo: 'imgprod',
-              value: uploadedImage,
+              value: uploadedImage!,
             },
           ],
           url_producator: url,
