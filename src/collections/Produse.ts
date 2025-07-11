@@ -1,6 +1,5 @@
 import type { CollectionConfig } from 'payload'
 
-// const materiale = ['aluminiu', 'metale', 'hârtie', 'lemn', 'plastic', 'neferoase', 'menajere']
 import materiale from '../util/materiale.json'
 
 export const Produse: CollectionConfig = {
