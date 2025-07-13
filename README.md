@@ -13,6 +13,10 @@
 - [ ] mailer
 - [x] versions/drafts? NEIN (https://payloadcms.com/docs/versions/overview)
 
+## components
+
+see [COMPONENTS.md](COMPONENTS.md)
+
 ## packages
 
 - Node.js user prompt library for command-line interfaces.: https://github.com/TopCli/prompts
@@ -40,10 +44,7 @@ devIndicators: {
 
 ```
 
-
-
 - Media collection
-
 
 ```js
 upload: {
