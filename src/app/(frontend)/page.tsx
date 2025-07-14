@@ -5,6 +5,7 @@ import './styles.css'
 
 import Image from 'next/image'
 import logo from 'src/assets/hct-logo.svg'
+import LogoProposal from './sections/LogoProposals'
 
 export default async function HomePage() {
   const payloadConfig = await config
@@ -12,9 +13,7 @@ export default async function HomePage() {
 
   return (
     <div className="">
-      <Image src={logo} alt="HCT Logo" />
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
-      <p>Home</p>
+      <LogoProposal />
     </div>
   )
 }
