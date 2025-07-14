@@ -25,13 +25,16 @@
     "@payloadcms/plugin-search": "3.45.0",
     "@payloadcms/richtext-lexical": "3.45.0",
     "@payloadcms/ui": "3.45.0",
+    "@tailwindcss/postcss": "^4.1.11",
     "cross-env": "^7.0.3",
     "dotenv": "16.4.7",
     "graphql": "^16.11.0",
     "next": "15.3.2",
     "payload": "3.45.0",
+    "postcss": "^8.5.6",
     "react": "19.1.0",
-    "sharp": "0.32.6"
+    "sharp": "0.32.6",
+    "tailwindcss": "^4.1.11"
   },
   "devDependencies": {
     "@ngneat/falso": "^8.0.2",
