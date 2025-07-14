@@ -19,6 +19,9 @@ export default async function RootLayout(props: { children: React.ReactNode }) {
 
   return (
     <html lang="en" className={outfit.className}>
+      <head>
+        <link rel="icon" href="/favicon.svg" sizes="any" type="image/svg+xml"></link>
+      </head>
       <body>
         <div className="mx-auto container">
           <Header />
