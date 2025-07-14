@@ -5,12 +5,12 @@ import v3 from 'src/assets/v3.svg'
 
 export default async function LogoProposal() {
   return (
-    <div className="flex items-center gap-2 w-full p-4 bg-gray-100 rounded-2xl">
-      <Image src={v1} alt="versiunea 1" priority />
+    <div className="flex items-center gap-2 max-w-2xl p-4 bg-gray-100 rounded-2xl">
+      <Image src={v1} alt="versiunea 1" priority width={120} />
       <div className="grow"></div>
-      <Image src={v2} alt="versiunea 2" priority />
+      <Image src={v2} alt="versiunea 2" priority width={120} />
       <div className="grow"></div>
-      <Image src={v3} alt="versiunea 3" priority />
+      <Image src={v3} alt="versiunea 3" priority width={120} />
     </div>
   )
 }

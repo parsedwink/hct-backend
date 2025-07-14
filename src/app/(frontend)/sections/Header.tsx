@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { NavbarDemo } from './Navbar'
 
 export default async function Header() {
   return (
@@ -9,6 +10,7 @@ export default async function Header() {
         <Link href="/de">de</Link>&nbsp;
         <Link href="/it">it</Link>&nbsp;
       </nav>
+      <NavbarDemo />
     </div>
   )
 }
