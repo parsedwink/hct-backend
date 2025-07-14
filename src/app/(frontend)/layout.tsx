@@ -10,8 +10,9 @@ const outfit = Outfit({
 })
 
 export const metadata = {
-  description: 'A blank template using Payload in a Next.js app.',
-  title: 'Payload Blank Template',
+  description:
+    'Soluții la cheie pentru reciclare fier vechi, aluminiu, DEEE-uri, VSU-uri, deșeuri din industria hârtiei.',
+  title: 'Hațegan Consulting & Trading',
 }
 
 export default async function RootLayout(props: { children: React.ReactNode }) {
