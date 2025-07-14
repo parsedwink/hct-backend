@@ -47,7 +47,7 @@ export default buildConfig({
     defaultFromName: 'Payload',
     // Nodemailer transportOptions
     transportOptions: {
-      host: 'localhost',
+      host: 'pop-os.lan',
       port: '1025',
       auth: false,
     },
