@@ -1,7 +1,15 @@
 # Payload for HCT
 
+## content
+
+- categorii gata in payload, la desc gasesti partenerii cu ele
+- all products from pocketbase
+
 ## TODO
 
+- [ ] site v0.1 (despre noi pe prima pagina) saptamana asta
+- [ ] propuneri logo catre Seba pentru Ioana
+- [ ] "draft" la produse
 - [x] clean db script
 - [x] imgprod missing placeholder with logo
 - [x] use falso fake data
