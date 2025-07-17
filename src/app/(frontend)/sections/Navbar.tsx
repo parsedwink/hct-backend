@@ -1,4 +1,5 @@
 'use client'
+import { ModeToggle } from '@/components/mode-toggle'
 import {
   Navbar,
   NavBody,
@@ -31,7 +32,10 @@ export function NavbarDemo() {
           <NavbarLogo />
           <NavItems items={navItems} />
           <div className="flex items-center gap-4">
-            <NavbarButton variant="secondary">theme</NavbarButton>
+            <NavbarButton>
+              <ModeToggle />
+            </NavbarButton>
+            {/* <NavbarButton variant="secondary">theme</NavbarButton> */}
             <NavbarButton variant="primary">Langs</NavbarButton>
           </div>
         </NavBody>

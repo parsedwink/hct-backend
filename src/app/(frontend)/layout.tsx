@@ -4,6 +4,7 @@ import './styles.css'
 import { Outfit } from 'next/font/google'
 import Header from './sections/Header'
 import Footer from './sections/Footer'
+import { ThemeProvider } from '@/components/theme-provider'
 
 const outfit = Outfit({
   subsets: ['latin', 'latin-ext'],
@@ -24,11 +25,18 @@ export default async function RootLayout(props: { children: React.ReactNode }) {
         <link rel="icon" href="/favicon.svg" sizes="any" type="image/svg+xml"></link>
       </head>
       <body>
-        <div className="mx-auto container">
-          <Header />
-          <main>{children}</main>
-          <Footer />
-        </div>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <div className="mx-auto container">
+            <Header />
+            <main>{children}</main>
+            <Footer />
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   )
