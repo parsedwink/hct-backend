@@ -20,7 +20,7 @@ export default async function RootLayout(props: { children: React.ReactNode }) {
   const { children } = props
 
   return (
-    <html lang="en" className={outfit.className}>
+    <html lang="en" className={outfit.className} suppressHydrationWarning>
       <head>
         <link rel="icon" href="/favicon.svg" sizes="any" type="image/svg+xml"></link>
       </head>
