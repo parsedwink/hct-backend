@@ -26,17 +26,23 @@ export const Produse: CollectionConfig = {
     { name: 'materiale', type: 'select', options: materiale, hasMany: true, index: true },
     { name: 'imagini', type: 'relationship', relationTo: ['imgprod'], hasMany: true },
     { name: 'url_producator', type: 'text' },
-    { name: 'import_img_name', type: 'text' },
-    { name: 'import_cod_partener', type: 'text' },
     {
-      name: 'import_categorie',
-      type: 'text',
-      admin: { description: 'Categoria din pagina producator' },
-    },
-    {
-      name: 'import_descriere_en',
-      type: 'text',
-      admin: { description: 'Traducere en descriere cu AI' },
+      type: 'collapsible',
+      label: 'Import data',
+      fields: [
+        { name: 'import_img_name', type: 'text' },
+        { name: 'import_cod_partener', type: 'text' },
+        {
+          name: 'import_categorie',
+          type: 'text',
+          admin: { description: 'Categoria din pagina producator' },
+        },
+        {
+          name: 'import_descriere_en',
+          type: 'text',
+          admin: { description: 'Traducere en descriere cu AI' },
+        },
+      ],
     },
   ],
   admin: { useAsTitle: 'nume' },
