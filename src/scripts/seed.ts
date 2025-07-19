@@ -158,7 +158,7 @@ export const script = async (config: SanitizedConfig) => {
         },
       })
     }
-    payload.logger.info(`created produs: ${name}`)
+    // payload.logger.info(`created produs: ${name}`)
   })
   await Promise.all(result)
   payload.logger.info('done: Produse')
