@@ -245,6 +245,14 @@ export interface Produse {
   id: number;
   nume: string;
   descriere?: string | null;
+  /**
+   * Promovat in liste produse
+   */
+  promo?: boolean | null;
+  /**
+   * link catre pagina dedicata din site
+   */
+  pagina?: string | null;
   partener?: (number | null) | Parteneri;
   categorie?: (number | null) | Categorii;
   materiale?: ('aluminiu' | 'metale' | 'hârtie' | 'lemn' | 'plastic' | 'neferoase' | 'menajere')[] | null;
@@ -257,7 +265,14 @@ export interface Produse {
   url_producator?: string | null;
   import_img_name?: string | null;
   import_cod_partener?: string | null;
+  /**
+   * Categoria din pagina producator
+   */
   import_categorie?: string | null;
+  /**
+   * Traducere en descriere cu AI
+   */
+  import_descriere_en?: string | null;
   updatedAt: string;
   createdAt: string;
 }
@@ -502,6 +517,8 @@ export interface ParteneriSelect<T extends boolean = true> {
 export interface ProduseSelect<T extends boolean = true> {
   nume?: T;
   descriere?: T;
+  promo?: T;
+  pagina?: T;
   partener?: T;
   categorie?: T;
   materiale?: T;
@@ -510,6 +527,7 @@ export interface ProduseSelect<T extends boolean = true> {
   import_img_name?: T;
   import_cod_partener?: T;
   import_categorie?: T;
+  import_descriere_en?: T;
   updatedAt?: T;
   createdAt?: T;
 }

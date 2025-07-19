@@ -4,7 +4,7 @@ import type { Parteneri } from '@/payload-types'
 import type { SanitizedConfig } from 'payload'
 import payload from 'payload'
 
-const BASE = 'import/'
+const BASE = 'data/'
 const PLACEHOLDER = `${BASE}image_placeholder.png`
 
 async function readFile(fileName: string): Promise<string> {
@@ -26,12 +26,14 @@ export const script = async (config: SanitizedConfig) => {
     url: string
   }[]
   const imp_prodse = JSON.parse(await readFile('prods.json')) as {
+    desc_translated: string
+    partner: string
     name: string
-    code: string
-    url: string
-    imp_categ: string
-    img_name: string
+    categ: string
     desc: string
+    url: string
+    imgUrl: string
+    img: string
   }[]
   const categorii_txt = await readFile('categorii.txt')
   const imp_categorii = categorii_txt.split('\n')
@@ -87,33 +89,34 @@ export const script = async (config: SanitizedConfig) => {
     filePath: PLACEHOLDER,
     data: { alt: 'Image Placeholder' },
   })
+
   result = imp_prodse.map(async (p) => {
-    const { name, code, url, imp_categ, img_name, desc } = p
+    const { desc_translated, partner, name, categ, desc, url, img } = p
 
     // imagine produs
     let imageOK = true
-    const imageFilePath = `${BASE}imagini_produse/${img_name}`
+    const imageFilePath = `${BASE}photos/${partner}/${img}`
 
     // check if image exists
-    if (img_name.length > 0) {
+    if (img.length > 0) {
       if (!existsSync(imageFilePath)) {
         imageOK = false
-        payload.logger.warn(`code ${code}, name ${name}, image not found: ${img_name}`)
+        payload.logger.warn(`image not found: ${partner} ${img}`)
       }
     } else {
       imageOK = false
-      payload.logger.warn(`code ${code}, name ${name}, has no image`)
+      payload.logger.warn(`${partner} ${name} has no image`)
     }
 
     // get partener from code
-    const partener = created_partneri.get(code)
+    const partener = created_partneri.get(partner)
 
     if (imageOK) {
       // create produs with image
       const uploadedImage = await payload
         .create({
           collection: 'imgprod',
-          data: { alt: `${code} ${name}` },
+          data: { alt: `${partner} ${name}` },
           filePath: imageFilePath,
         })
         .catch((error) => {
@@ -132,9 +135,10 @@ export const script = async (config: SanitizedConfig) => {
             },
           ],
           url_producator: url,
-          import_img_name: img_name,
-          import_cod_partener: code,
-          import_categorie: imp_categ,
+          import_img_name: img,
+          import_cod_partener: partner,
+          import_categorie: categ,
+          import_descriere_en: desc_translated,
         },
       })
     } else {
@@ -147,9 +151,10 @@ export const script = async (config: SanitizedConfig) => {
           partener: partener,
           imagini: [],
           url_producator: url,
-          import_img_name: img_name,
-          import_cod_partener: code,
-          import_categorie: imp_categ,
+          import_img_name: img,
+          import_cod_partener: partner,
+          import_categorie: categ,
+          import_descriere_en: desc_translated,
         },
       })
     }
