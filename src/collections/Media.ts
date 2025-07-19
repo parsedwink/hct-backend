@@ -14,39 +14,21 @@ export const Media: CollectionConfig = {
   ],
   upload: {
     staticDir: 'public/media',
-    adminThumbnail: 'thumbnail',
     displayPreview: true,
+    adminThumbnail: 'small',
+    mimeTypes: ['image/*'],
     imageSizes: [
       {
-        name: 'thumbnail',
-        width: 300,
-      },
-      {
-        name: 'square',
-        width: 500,
-        height: 500,
-      },
-      {
         name: 'small',
-        width: 600,
-      },
-      {
-        name: 'medium',
-        width: 900,
+        fit: 'cover',
+        height: 200,
+        width: 200,
       },
       {
         name: 'large',
-        width: 1400,
-      },
-      {
-        name: 'xlarge',
-        width: 1920,
-      },
-      {
-        name: 'og',
-        width: 1200,
-        height: 630,
-        crop: 'center',
+        fit: 'cover',
+        height: 600,
+        width: 600,
       },
     ],
   },
