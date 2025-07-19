@@ -13,7 +13,7 @@ export const Produse: CollectionConfig = {
   },
   fields: [
     { name: 'nume', type: 'text', required: true },
-    { name: 'descriere', type: 'textarea' },
+    { name: 'descriere', type: 'textarea', admin: { rows: 4 } },
     {
       name: 'promo',
       type: 'checkbox',
