@@ -38,6 +38,8 @@ see [COMPONENTS.md](COMPONENTS.md)
 
 ## articles
 
+see [DEPLOY.md](DEPLOY.md).
+
 - Running Next.js with Docker: https://markus.oberlehner.net/blog/running-nextjs-with-docker
 - Deploying a Next.js app to production using Docker: https://codeparrot.ai/blogs/deploy-nextjs-app-with-docker-complete-guide-for-2025
 
