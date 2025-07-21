@@ -2,6 +2,7 @@
 // import { randParagraph } from '@ngneat/falso'
 
 // import config from '@/payload.config'
+import BentoMagic from './components/Bento_magic'
 import './styles.css'
 
 export default async function HomePage() {
@@ -13,6 +14,7 @@ export default async function HomePage() {
   return (
     <div className="">
       <p>content</p>
+      <BentoMagic />
     </div>
   )
 }
