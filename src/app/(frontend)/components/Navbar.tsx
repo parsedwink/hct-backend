@@ -19,52 +19,7 @@ import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover
 import Image from 'next/image'
 
 // Navigation links array to be used in both desktop and mobile menus
-const navigationLinks = [
-  { href: '#', label: 'Despre noi' },
-  {
-    label: 'Produse',
-    submenu: true,
-    type: 'description',
-    items: [
-      {
-        href: '#',
-        label: 'Components',
-        description: 'Browse all components in the library.',
-      },
-      {
-        href: '#',
-        label: 'Documentation',
-        description: 'Learn how to use the library.',
-      },
-      {
-        href: '#',
-        label: 'Templates',
-        description: 'Pre-built layouts for common use cases.',
-      },
-    ],
-  },
-  {
-    label: 'Parteneri',
-    submenu: true,
-    type: 'simple',
-    items: [
-      { href: '#', label: 'Product A' },
-      { href: '#', label: 'Product B' },
-      { href: '#', label: 'Product C' },
-      { href: '#', label: 'Product D' },
-    ],
-  },
-  {
-    label: 'Servicii',
-    submenu: true,
-    type: 'icon',
-    items: [
-      { href: '#', label: 'Getting Started', icon: 'BookOpenIcon' },
-      { href: '#', label: 'Tutorials', icon: 'LifeBuoyIcon' },
-      { href: '#', label: 'About Us', icon: 'InfoIcon' },
-    ],
-  },
-]
+import { navigationLinks } from '@/config/menu'
 
 export default function Navbar() {
   return (
@@ -114,7 +69,7 @@ export default function Navbar() {
                             {link.label}
                           </div>
                           <ul>
-                            {link.items.map((item, itemIndex) => (
+                            {link.items!.map((item, itemIndex) => (
                               <li key={itemIndex}>
                                 <NavigationMenuLink href={item.href} className="py-1.5">
                                   {item.label}
@@ -167,7 +122,7 @@ export default function Navbar() {
                         </NavigationMenuTrigger>
                         <NavigationMenuContent className="data-[motion=from-end]:slide-in-from-right-16! data-[motion=from-start]:slide-in-from-left-16! data-[motion=to-end]:slide-out-to-right-16! data-[motion=to-start]:slide-out-to-left-16! z-50 p-1">
                           <ul className={cn(link.type === 'description' ? 'min-w-64' : 'min-w-48')}>
-                            {link.items.map((item, itemIndex) => (
+                            {link.items!.map((item, itemIndex) => (
                               <li key={itemIndex}>
                                 <NavigationMenuLink href={item.href} className="py-1.5">
                                   {/* Display icon if present */}
