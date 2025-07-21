@@ -1,3 +1,6 @@
-export default async function Header() {
-  return <div>Navbar</div>
+'use client'
+import Navbar from '../components/Navbar'
+
+export default function Header() {
+  return <Navbar />
 }

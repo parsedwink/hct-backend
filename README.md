@@ -36,6 +36,10 @@ see [COMPONENTS.md](COMPONENTS.md)
 - emoji picker: https://www.freetool.dev/emoji-picker/
 - GitHub - cloudfour/simple-svg-placeholder: A very simple placeholder image generator with zero dependencies.: https://github.com/cloudfour/simple-svg-placeholder
 
+## favicon
+
+- https://realfavicongenerator.net/
+
 ## articles
 
 see [DEPLOY.md](DEPLOY.md).
