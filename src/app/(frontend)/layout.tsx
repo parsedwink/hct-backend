@@ -22,7 +22,8 @@ export default async function RootLayout(props: { children: React.ReactNode }) {
   return (
     <html lang="en" className={outfit.className} suppressHydrationWarning>
       <head>
-        <link rel="icon" href="/favicon.svg" sizes="any" type="image/svg+xml"></link>
+        <link rel="icon" href="/favicon.ico" sizes="any" type="image/svg+xml"></link>
+        {/* <link rel="icon" href="/icon?<generated>" type="image/<generated>" sizes="<generated>" /> */}
       </head>
       <body>
         <ThemeProvider
