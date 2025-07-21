@@ -2,7 +2,9 @@
 // import { randParagraph } from '@ngneat/falso'
 
 // import config from '@/payload.config'
+import { Separator } from '@/components/ui/separator'
 import BentoMagic from './components/Bento_magic'
+import OneProduct from './components/OneProduct'
 import './styles.css'
 
 export default async function HomePage() {
@@ -13,7 +15,8 @@ export default async function HomePage() {
 
   return (
     <div className="">
-      <p>content</p>
+      <OneProduct />
+      <Separator className="my-4" />
       <BentoMagic />
     </div>
   )
