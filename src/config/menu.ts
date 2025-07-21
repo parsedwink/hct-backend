@@ -10,6 +10,7 @@ interface MenuItem {
 
 export const navigationLinks: Partial<MenuItem>[] = [
   { href: '#', label: 'Despre noi' },
+  { href: '/lista', label: 'Lista' },
   {
     label: 'Produse',
     submenu: true,
