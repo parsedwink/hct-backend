@@ -15,7 +15,8 @@ export default async function OneProduct() {
   const demo = promoProducts.docs[3]
   return (
     <div>
-      <h2 className="text-4xl">{demo.nume}</h2>
+      {/* demo hidden */}
+      <h2 className="text-4xl hidden">{demo.nume}</h2>
     </div>
   )
 }

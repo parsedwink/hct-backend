@@ -1,6 +1,6 @@
 import { getPayload } from 'payload'
 import config from '@payload-config'
-import { GalleryItem } from './Carousel_blocks'
+import { CarouselBlocks, GalleryItem } from './Carousel_blocks'
 import { Imgprod } from '@/payload-types'
 
 export default async function Carousel() {
@@ -20,11 +20,11 @@ export default async function Carousel() {
     return {
       id: p.id.toString(),
       title: p.nume,
-      summary: p.descriere!,
+      summary: p.import_descriere_en!,
       url: p.url_producator!,
       image: img.url!,
     }
   })
 
-  return <div></div>
+  return <CarouselBlocks heading="Noutăți" items={carouselProducts}></CarouselBlocks>
 }
